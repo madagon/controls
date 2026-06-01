@@ -85,13 +85,13 @@ Object {
 					callback("")
 					return
 				}
-				var res
+				var parsed
 				try {
-					res = JSON.parse(text)
+					parsed = JSON.parse(text)
 				} catch (e) {
-					res = text
+					parsed = text
 				}
-				callback(res)
+				callback(parsed)
 			},
 			error: function(res) {
 				--self.activeRequests
